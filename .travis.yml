@@ -1,0 +1,12 @@
+language: python
+python:
+- '3.6'
+- 3.7-dev
+script: python setup.py test
+
+deploy:
+  provider: pypi
+  user: felipaoo
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
