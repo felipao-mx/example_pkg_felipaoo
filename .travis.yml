@@ -6,7 +6,7 @@ script: python setup.py test
 deploy:
   provider: pypi
   user: felipaoo
-  server: https://test.pypi.org/legacy/
+  server: https://test.pypi.org/legacy
   distributions: sdist bdist_wheel
   on:
     tags: true
