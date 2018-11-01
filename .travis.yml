@@ -3,10 +3,12 @@ python:
 - '3.6'
 - 3.7-dev
 script: python setup.py test
-
 deploy:
   provider: pypi
   user: felipaoo
+  server: https://test.pypi.org/legacy/
   distributions: sdist bdist_wheel
   on:
     tags: true
+  password:
+    secure: kr/NyxLqIHhHVJgHxq7kmOocvTyUBjx857JaWnUxXSEWw/wmA5uzRhC6nGi+lIfjXxlLn4dgQZ4zArjSk7VebkXmiXYAVHGpOmc7N2ZX4egQdlD5G7GU3woNSGBC3oIUn6PBIaIrzlzRcyL3zwWCYE1kL1Z5Pw0kRSPRm7wgtUiQdJKqjSaq+2LyyAzvVEdIMdPRI7a5LSqIiTJKyUMxafVrptlcXTUsLxhTZrr/AAL4ea1nQlmUxtTJkDdj1INEgixuouixFQf5w/txnXbMeoQQ0Jee/gu6r4Bv/isLZTH8H0HX1GD7z0vg+1PDS/tw091gnbFkLHouafQN4VHXFT+6dT19+625NVfsAOLbijO/cSDijoEvyyoTGqNQHgOkEydIpiEtrHh0VEFvEsEpwbD5m07TEVM4JSRXhWQ+/mjPP20rqJq/fgfJn9cWoC0y0kAwsFsvC2VC4UuYHvtygiwwJC4zXNSbNjb6noUO/2Y+Iis++MoeKZnjoKwSPJ2zfXc0K12rscF3n7b1keeZT778Kd6vnZxXWha1uWK8jr41fU/riwgn1+TrVPvOKFkeTERqYSbljq24rfovAbt3F+m8CjNARFZ237gKZSn6EAPGCMtVkwhwvgn3SDrFIXUtAu37gnSE7AQDMlX9n+swlJvk4L4SK8iV7ZnBLSPxBUY=
