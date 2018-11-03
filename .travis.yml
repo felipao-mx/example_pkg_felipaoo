@@ -15,6 +15,6 @@ jobs:
         on:
           tags: true
         password:
-          secure: "Cwitto6cOKsmpRdkU2Uz5kq2BRB/W1GFzWgXg7Fhm6EgcSs7dpT2Xt1eseP9Jfx/GHxRaJusY2Jmp1Cmiib5zR09y5mcdaT9Y4Nz+5+PyWv1+v97NurRH0Lw2B38T0MpBIktHkPbP6ugYu+PSzMfpnff4PoRPyrRShGThLNj/PHzTSPbPhjdB+yG4T2Vmj4vfkKO40YWgKnfDYh7jJ0aBpHbFNDXqtIZnx27xF7SpyHNJva+kvC2mUWFEL+MFvpxaQ71k4IU157TH3zHMYegRBiwDosry9M+TCYGE+YMex/oxl/3fV2SjXo99oQi1zEsPQ+6of4Zlfph9svyVgAAx0nnFordOLjjzsEMngrHntCeKY+FiRudLfpioqIFswgJecW14dT8NBuRiIM+f3p6STU9uRPfuGwPG1/VwKmLi40FRTY5I8OuU9QAOA73xYpmDmNJf9BKcW07TFViJHl4NvQ/81LL13Hs7wNbyb/w9AQ7o7EDEvngBFyUFVTGemFGJTxOifcwf0VnIJlzPqKK0H5gBWHmWKGnnQODK2cjb34u/8uIdgKgu72zCz6u+6MWGR6rL6VpOY/oJRxvcmqKT2MKOOHmGmL/GrIW8SjGVdF5DoCVzhfilRxoQngbK2C8WL5zBLXLJYrJLTvjYQ9MoNCw9I2U5b3RxlRWYOA7DMU="
+          secure: "mwqUOlFwm2ae8lrTxxoGue8o9EyM8qSrjPJkruxp7OAn2EthO3//s9UdxSeAleaDYXxfx1d8VvLAg9beUM6phl/6IDrVbmiEPCn3/EjjyPyCUmXmL4gfxrg4N0wr5yoDUC5/6iQ0g0aJmDaDRLzT2m6I82rqOac20pTjEOczSfmXZWXpUt3MslbqeZ+dxXLwMMXIzs/R6qlCJFsP/g76PynTPT4S52Tv0YJ2csoqPMLQqoMgMeIW/7vGSTdmZrvwseVQGuzExfvAQLDXdHLoWn162cO5oBa7uLXbkxFWsBA3mJtzSGKnBRjN/wFpTdOe6DOHOd108BPvjnzn4ydsuNLDaCJ+Up+jyhomLlSdHBZuz+sEyxSJFzDAgCr5IewClsEhpCBOzi5DkRZla+loo+/8sXbQKb5RtzCQksTtLcDNqE5MkFwajuS53EpVF32ER9WhRN6GYc8BZoidwYeuy/Uxbb9ZxN2f+PyfAvOWlur84Ki2X1Lca5pvnh8u7WCASw2W89BsDGDOJ7GYgWKmDy0DR7LOhBpcUNAFQSryYCMDedoq9AXRYmW5lb/95q/V97vE1vwjJ8hU/4O1oAJSoNErqKBgQjkE603US61kFIe55i8sUsOIquAvuJk+jUk1uykXc3A4A2NEjuqvuiJU6SUYHxXQmpGdOJkYNUiqZaU="
         server: https://test.pypi.org/legacy/
         distributions: sdist bdist_wheel
