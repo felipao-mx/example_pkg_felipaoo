@@ -1,11 +1,17 @@
+import io
+import re
+
 import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with io.open('example_pkg_felipaoo/__init__.py', 'rt', encoding='utf8') as f:
+    version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
+
 setuptools.setup(
     name="example_pkg_felipaoo",
-    version="0.0.1.9",
+    version=version,
     author="Example Author",
     author_email="author@example.com",
     description="A small example package",
