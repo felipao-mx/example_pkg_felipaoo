@@ -1,13 +1,20 @@
 language: python
 python:
-- 3.6
+- '3.6'
+- '3.7-dev'
 script: python setup.py test
-deploy:
-  provider: pypi
-  user: felipaoo
-  on:
-    tags: true
-  password:
-    secure: "tyQ58cqybUdDee12RxVT/lPLbD0f3lt5+wicmcwD8iNRHZfcU1aI5LAVBWv5CpG7GDtLTp2P+pbbw6CzmzVz1y/Mg/YnKVXq4euBxpzjdv6t1LDt15QFKhVGEJz6WICscsd7vdpp4lAdIa7tV02Ln/ZTz91c+zmP7v/alEsZDcVQQ1oeI1P5AXIR0M+cgfs5zTIvQTkNvaBqIdFi5Qu68ZDWfwQNCW3ItOg5Ymvj5LuCGI1DqqLmpXARF+C2qvcy9q5EpwgwkwI/1/ivou5p05aSBiId59qr9r4Aw7YME7ccGS5tFx0EjZAaQn6CZzSVHA5mbEPY6ksO1uQYTeAA2ipdWgIljPsP7xGZb9UoWQClRmhf4iZ7hrzq8o0ZjI6I7CLkXoqbFMZ5c/bJ6OiQZ1YmoludLJ6bulSIinUl4eXvglmvtJ5934k4pdfhIQIKLwqbKNFoSB8GV9IvledDuamIiT2f8Yzx7GuL0n7qDF6HqFn3QsjQ+4FeScZVy78bVunQDOgnOZmD2938gtjeH6GElvGhUqv1bZ3aJtT/CVL7LgkojIZ4T4wFan3JVSJ3Ggp5ywyQE69nFigfNuGLVTNB/1Eg0q8EYZ7/fMQHylr30m0uvRW7UJIDj7f6M3YWiv3TjM+zrlW8erBeWS7xc0x139GpWOk3c8hZPoE3ZwY="
-  server: https://test.pypi.org/legacy/
-  distributions: "bdist_wheel"
+
+jobs:
+  include:
+    - stage: pypi release
+      python: 3.7-dev
+      script: echo "release package to pypi"
+      deploy:
+        provider: pypi
+        user: felipaoo
+        on:
+          tags: true
+        password:
+          secure: Cwitto6cOKsmpRdkU2Uz5kq2BRB/W1GFzWgXg7Fhm6EgcSs7dpT2Xt1eseP9Jfx/GHxRaJusY2Jmp1Cmiib5zR09y5mcdaT9Y4Nz+5+PyWv1+v97NurRH0Lw2B38T0MpBIktHkPbP6ugYu+PSzMfpnff4PoRPyrRShGThLNj/PHzTSPbPhjdB+yG4T2Vmj4vfkKO40YWgKnfDYh7jJ0aBpHbFNDXqtIZnx27xF7SpyHNJva+kvC2mUWFEL+MFvpxaQ71k4IU157TH3zHMYegRBiwDosry9M+TCYGE+YMex/oxl/3fV2SjXo99oQi1zEsPQ+6of4Zlfph9svyVgAAx0nnFordOLjjzsEMngrHntCeKY+FiRudLfpioqIFswgJecW14dT8NBuRiIM+f3p6STU9uRPfuGwPG1/VwKmLi40FRTY5I8OuU9QAOA73xYpmDmNJf9BKcW07TFViJHl4NvQ/81LL13Hs7wNbyb/w9AQ7o7EDEvngBFyUFVTGemFGJTxOifcwf0VnIJlzPqKK0H5gBWHmWKGnnQODK2cjb34u/8uIdgKgu72zCz6u+6MWGR6rL6VpOY/oJRxvcmqKT2MKOOHmGmL/GrIW8SjGVdF5DoCVzhfilRxoQngbK2C8WL5zBLXLJYrJLTvjYQ9MoNCw9I2U5b3RxlRWYOA7DMU=
+        server: https://test.pypi.org/legacy/
+        distributions: sdist bdist_wheel
