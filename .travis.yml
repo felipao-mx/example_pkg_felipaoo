@@ -11,10 +11,11 @@ jobs:
       script: echo "release package to pypi"
       deploy:
         provider: pypi
+        twine_version: 1.12.1
         user: felipaoo
         on:
           tags: true
         password:
-          secure: "mwqUOlFwm2ae8lrTxxoGue8o9EyM8qSrjPJkruxp7OAn2EthO3//s9UdxSeAleaDYXxfx1d8VvLAg9beUM6phl/6IDrVbmiEPCn3/EjjyPyCUmXmL4gfxrg4N0wr5yoDUC5/6iQ0g0aJmDaDRLzT2m6I82rqOac20pTjEOczSfmXZWXpUt3MslbqeZ+dxXLwMMXIzs/R6qlCJFsP/g76PynTPT4S52Tv0YJ2csoqPMLQqoMgMeIW/7vGSTdmZrvwseVQGuzExfvAQLDXdHLoWn162cO5oBa7uLXbkxFWsBA3mJtzSGKnBRjN/wFpTdOe6DOHOd108BPvjnzn4ydsuNLDaCJ+Up+jyhomLlSdHBZuz+sEyxSJFzDAgCr5IewClsEhpCBOzi5DkRZla+loo+/8sXbQKb5RtzCQksTtLcDNqE5MkFwajuS53EpVF32ER9WhRN6GYc8BZoidwYeuy/Uxbb9ZxN2f+PyfAvOWlur84Ki2X1Lca5pvnh8u7WCASw2W89BsDGDOJ7GYgWKmDy0DR7LOhBpcUNAFQSryYCMDedoq9AXRYmW5lb/95q/V97vE1vwjJ8hU/4O1oAJSoNErqKBgQjkE603US61kFIe55i8sUsOIquAvuJk+jUk1uykXc3A4A2NEjuqvuiJU6SUYHxXQmpGdOJkYNUiqZaU="
+          secure: "pOAJmng9qQdQcf0bEBduQZHsvqYm3BInnuChw2+4rSbsEc+ZcQ6j4jMq9vC4gryKvcsn9fn9icN6hbrxA4388BQkLiVMuf/ZE24l5WkSiPEL4wVfg7qI+5LO/Y0Z4IxZ+X/mhRw0d+y4TE2W+x4U/mYRFMxjUwd9N0DMYnMWV5PRtb994HehFBITpoo9A/PjFyC60s1lckXNyqaA+lGkpZcKS43eyHZABmBstXi7i9dPKCQ2ESJg1guWlSvnqVJN5pyAieHI6Hi5mCq451Z11Tt9VX604m7zOxKYkd+wL7oB6SNUOGGZ6vRk6HHBkHPv0Fws1ZH6yzZr7+OzajuOJCRLRGvjcM1eR7yfAVAsz/cGRN5Qv3y/n3YHcKjfj2tAH+s8ULIExbE8LlZQzbDBvsYCZ4hUR3OTIzBNUwJg1G/W5GOT5dxjVoYGGxJewZZxy9PDSDYC8L1fkORhXlGK7o2Ei1ODRyTeLkylqCFDw2DNhx2aUopNuILc49FTakLm89kUCKIwM+8VJL12xsRTIGj1u7R2BJvxYIsNTAJiegTBHGQZ6Gs1w8AtyjwxONk2fB913E+GHmujTc27RVvmV1JX52RgS/8mMd382A50LSga9IqYUPbTNLignpSYs5htvxfbF7faX+IDhMeBKZcYypcRqgl26M9NX3WQhGWgF4M="
         server: https://test.pypi.org/legacy/
         distributions: sdist bdist_wheel
